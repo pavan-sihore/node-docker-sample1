@@ -22,16 +22,6 @@ It includes a `Dockerfile` to containerize the app for development or production
 - [Docker](https://www.docker.com/) installed and running
 
 
-
-## ⚙️ Environment Configuration
-
-Create a `.env` file in the root:
-
-```env
-PORT=3000
-````
-
-
 ## 🐳 Running with Docker
 
 ### 1. 🔨 Build the Docker image
