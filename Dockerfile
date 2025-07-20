@@ -1,18 +1,20 @@
-# Base image
-FROM node:18
+# Use lightweight Node base image
+FROM node:18-alpine
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and install dependencies
-COPY package.json ./
+# Copy only package.json and package-lock.json first (better cache)
+COPY package*.json ./
+
+# Install all dependencies including dev ones
 RUN npm install
 
-# Copy rest of the code
+# Copy the rest of your application code
 COPY . .
 
-# Expose port
+# Expose the port (matches your .env or server.js)
 EXPOSE 3000
 
-# Run the app
-CMD ["npm", "start"]
+# Set the command to run the dev script
+CMD ["npm", "run", "dev"]
