@@ -1,5 +1,3 @@
-## Clone project
-
 # Node.js Express App with Docker
 
 This project is a simple Node.js and Express server with ES Module support, organized with modular routes and a Bootstrap-based static frontend.
